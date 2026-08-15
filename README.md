@@ -1,2 +1,6 @@
 # student-grading-system
-for grading student according to their grades 
+For basic grading system for students
+
+
+
+#for fun😅 
