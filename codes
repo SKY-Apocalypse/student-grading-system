@@ -1,3 +1,63 @@
-#include<iostream>
-#include<math>
+#include <iostream>
 using namespace std;
+class Student{
+    private:
+char name[50];
+    int roll_no;
+    float marks[5];
+    float total;
+    float percentage;
+    char grade;
+    public:
+    void input(){
+ cout<<"\nEnter your name:";
+ cin>>name;
+ cout<<"\nEnter your roll number:";
+ cin>>roll_no;
+ cout<<"\nEnter the marks of 5 subjects:";
+  for(int i=0;i<5;i++){
+    cout<<"\nSubjects"<<i+1<<":";
+    cin>>marks[i];
+  }
+    }
+    void calculator(){
+       total=0;
+        for(int i=0;i<5;i++){
+            total+=marks[i];
+        }
+        percentage=(total/500)*100;
+        if(percentage>=90){
+            grade='A';
+        }
+        else if(percentage>+80){
+            grade='B';
+        }
+        else if(percentage>=70){
+            grade='C';
+        }
+        else if(percentage>=60){
+            grade='d';
+        }
+        else if(percentage>=50){
+            grade='E';
+        }
+        else{
+            grade='F';
+        }
+    }
+    void display(){
+        cout<<"\nName:"<<name;
+        cout<<"\nRoll no:"<<roll_no;
+        cout<<"\nTotal:"<<total;
+        cout<<"\nPercentage:"<<percentage;
+        cout<<"\nGrade:"<<grade;
+    }
+
+};
+int main(){
+    Student s;
+    s.input();
+    s.calculator();
+    s.display();
+    return 0;
+}
